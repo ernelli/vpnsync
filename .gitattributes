@@ -1,2 +1,2 @@
-state/connections filter=git-crypt diff=git-crypt
+state/* filter=git-crypt diff=git-crypt
 *.key filter=git-crypt diff=git-crypt
