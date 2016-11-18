@@ -12,7 +12,7 @@ sudo -u pi ./port-forward.sh >> ./startup.log
 echo "bring br0 up..." >> ./startup.log
 ifup br0 >> ./startup.log
 echo "Start openvpn..." >> ./startup.log
-./open-vpn.sh
+./openvpn.sh
 echo "Announce public IP..." >> ./startup.log
 ./announce.sh
 echo "Alldone VPN node ready..." >> ./startup.log
