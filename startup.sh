@@ -4,7 +4,7 @@ cd /home/pi/vpnsync
 
 LOGFILE=./slack.pipe
 
-sudo -u pi echo $(date) Starting up, running as $(whoami) starting slack logger > $LOGFILE
+sudo -u pi echo $(date) Starting up, running as $(whoami) starting slack logger > ./startup.log
 
 ./slack-logger.sh &
 
