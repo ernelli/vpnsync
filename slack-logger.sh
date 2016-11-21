@@ -4,6 +4,10 @@
 
 #echo slack: $SLACK
 
+if [ ! -e slack.pipe ]; then
+    mkfifo slack.pipe
+fi
+
 while [ true ]; do
   MSG=$(cat ./slack.pipe | sed -e 's|\"|\\"|g')
   JSON="{ \"text\" : \"$MSG\" }"
