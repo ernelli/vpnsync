@@ -25,6 +25,7 @@ echo "Start openvpn..." >> $LOGFILE
 #./announce.sh
 
 if [ -e sshlink.rc ]; then
+    echo "Starting SSH link using params $(cat sshlink.rc)" >> $LOGFILE
     sudo -u pi ./ssh-link.sh &
 fi
 
