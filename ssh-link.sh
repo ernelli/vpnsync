@@ -1,7 +1,7 @@
 #!/bin/bash
 
 . sshlink.rc
-
+. /home/pi/agent.rc
 LOGFILE=./slack.pipe
 
 while [ true ]; do

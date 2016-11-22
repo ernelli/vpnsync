@@ -11,7 +11,6 @@ sudo -u pi echo $(date) Starting up, running as $(whoami) starting slack logger 
 sudo -u pi echo $(date) Starting up, slack logger started, external ip $(external-ip) > $LOGFILE
 
 sudo -u pi ./ssh_agent.sh
-. /home/pi/agent.rc
 
 #sync repo
 #sudo -u pi git pull >> $LOGFILE
@@ -24,5 +23,9 @@ echo "Start openvpn..." >> $LOGFILE
 
 #echo "Announce public IP..." >> $LOGFILE
 #./announce.sh
+
+if [ -e sshlink.rc ]; then
+    sudo -u pi ./ssh-link.sh &
+fi
 
 echo "Alldone VPN node ready..." >> $LOGFILE
