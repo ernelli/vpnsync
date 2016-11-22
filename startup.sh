@@ -10,8 +10,9 @@ sudo -u pi echo $(date) Starting up, running as $(whoami) starting slack logger 
 
 sudo -u pi echo $(date) Starting up, slack logger started, external ip $(external-ip) > $LOGFILE
 
-#sudo -u pi ./ssh_agent.sh
-#. /home/pi/agent.rc
+sudo -u pi ./ssh_agent.sh
+. /home/pi/agent.rc
+
 #sync repo
 #sudo -u pi git pull >> $LOGFILE
 
