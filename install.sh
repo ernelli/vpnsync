@@ -7,9 +7,9 @@ apt-get install git
 apt-get install libssl-dev
 
 
-git clone https://github.com/AGWA/git-crypt.git
-cd git-crypt
-make
-make install
+#git clone https://github.com/AGWA/git-crypt.git
+#cd git-crypt
+#make
+#make install
 
 
